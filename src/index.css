@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100vh;
+  padding-top: 4.5rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/**
+ * Navbar
+ */
+.main-navbar {
+  height: 4rem;
+  border-bottom: 1px solid #e0e0e0;
 }
