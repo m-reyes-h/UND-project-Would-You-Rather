@@ -5,9 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  background-color: #fafafa;
   min-height: 100vh;
-  padding-top: 4.5rem;
+  padding: 4.5rem 0 1rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 code {
@@ -19,6 +23,113 @@ code {
  * Navbar
  */
 .main-navbar {
+  background-color: rgba(255,255,255,.97);
   height: 4rem;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.answer-section {
+  margin-top: 1rem;
+}
+
+.answer-section h2 {
+  font-weight:400;
+}
+
+/**
+ * Scroll
+ */
+.scroll-menu-wrapper {
+  position: relative;
+}
+
+.menu-wrapper {
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
+  margin-top: 3rem
+}
+
+
+
+.text-wrapper {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 2rem;
+}
+
+
+
+.menu-item {
+  position: relative;
+  border-radius: .5rem;
+  margin: .5rem .85rem 2rem;
+  background-color: white;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  box-shadow:
+  0 14px 25.6px -74px rgba(0, 0, 0, 0.023),
+  0 20.8px 41.1px -74px rgba(0, 0, 0, 0.034),
+  0 29px 55.8px -74px rgba(0, 0, 0, 0.048),
+  0 43px 82px -74px rgba(0, 0, 0, 0.08);
+  width: 26vw;
+  height: 34vh;
+  color: rgba(0,0,0,.87)
+
+}
+
+.scroll-menu-arrow {
+  padding: 1px;
+  cursor: pointer;
+}
+
+.scroll-menu-arrow .arrow-prev,
+.scroll-menu-arrow .arrow-next {
+  width: 48px;
+  height: 48px;
+  top: -3rem;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-menu-arrow--disabled .arrow-prev,
+.scroll-menu-arrow--disabled .arrow-next {
+  opacity: .3;
+}
+
+.scroll-menu-arrow .arrow-prev {
+  position: absolute;
+  right: 72px;
+  background-image: url("./icons/arrow_back-24px.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.scroll-menu-arrow .arrow-next {
+  position: absolute;
+  right: 0;
+  background-image: url("./icons/arrow_forward-24px.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+.menu-item-card {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.card-user1 {
+  background-image: url("./icons/user1.png");
+  background-position: 75% 10%;
+  background-repeat: no-repeat;
+  background-size: 100;
 }
