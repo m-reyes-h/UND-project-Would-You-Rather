@@ -20,12 +20,21 @@ const list = [
 const MenuItem = ({ text }) => {
   return (
     <div className="menu-item">
-      <div className="menu-item-card d-flex flex-column justify-center  text-left card-user1"></div>
-      <div className="text-wrapper">
-        <span className="d-inline-block menu-item-title">Sara Edo asks</span>
-        <p>Would you like be a front end or ...</p>
-        <button className="button">View Pull</button>
+      <div className="d-flex align-items-center">
+        <span class="menu-item-avatar"></span>
+        <div className="d-flex flex-column">
+          <span className="menu-item-name"></span>
+          <small className="menu-item-asks">asks</small>
+          <p>Would you rather be Front end or...</p>
+        </div>
       </div>
+
+      <div className="menu-item-overlay"></div>
+      <div className="menu-item-botton">
+        <span>View Poll</span>
+        <span className="menu-item-view-poll"></span>
+      </div>
+
     </div>
   );
 };

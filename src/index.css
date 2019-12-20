@@ -49,37 +49,30 @@ code {
   margin-top: 3rem
 }
 
+.menu-item-view-poll {
+    color: #5778F3;
+    transition: transform .3s ease-in-out;
+    font-size: 25px;
+    padding: 15px 20px;
+    position: relative;
+}
 
+.menu-item-view-poll::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 22px;
+    width: 12px;
+    background: url("./icons/arrow_forward-24px.svg") no-repeat;
+}
 
-.text-wrapper {
-  position: absolute;
-  top: 35%;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  padding: 2rem;
+.menu-item-view-poll:hover {
+    transform: translateX(25px);
 }
 
 
-
-.menu-item {
-  position: relative;
-  border-radius: .5rem;
-  margin: .5rem .85rem 2rem;
-  background-color: white;
-  user-select: none;
-  cursor: pointer;
-  border: none;
-  box-shadow:
-  0 14px 25.6px -74px rgba(0, 0, 0, 0.023),
-  0 20.8px 41.1px -74px rgba(0, 0, 0, 0.034),
-  0 29px 55.8px -74px rgba(0, 0, 0, 0.048),
-  0 43px 82px -74px rgba(0, 0, 0, 0.08);
-  width: 26vw;
-  height: 34vh;
-  color: rgba(0,0,0,.87)
-
-}
 
 .scroll-menu-arrow {
   padding: 1px;
@@ -119,12 +112,6 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 24px;
-}
-
-.menu-item-card {
-  padding: 2rem;
-  height: 100%;
-  width: 100%;
 }
 
 .card-user1 {
