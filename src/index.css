@@ -78,6 +78,41 @@ body {
   margin-left: .5rem;
 }
 
+/**
+ * New Question
+ */
+
+.newq-content form {
+  border-radius: 8px;
+}
+
+.newq-title {
+  font-weight: 300;
+  opacity: .54;
+}
+
+.newq-subtitle {
+  font-weight: 400;
+}
+
+.newq-content .question-control {
+  height: 54px;
+  position: relative;
+  background-color: #f2f3f5;
+  border-color: transparent;
+  border-bottom: 2px solid transparent;
+  box-shadow: none;
+}
+
+.newq-content .question-control:focus {
+  border-bottom-color: #4285F4;
+}
+
+.newq-content .question-control::placeholder {
+  color: rgba(0,0,0,.27);
+  opacity: 1;
+}
+
 
 /**
  * Utils
@@ -101,6 +136,26 @@ body {
   width: 32px;
   vertical-align: middle;
 }
+
+.flat-button,
+.flat-button:hover,
+.flat-button:active,
+.flat-button:focus {
+  border: 0 !important;
+  border-radius: 0;
+  border-top: 1px solid rgba(0,0,0,.125) !important;
+  height: 3.5rem;
+  color: #4285F4 !important;
+  background-color: transparent !important;
+  box-shadow: none;
+}
+
+.flat-button:active,
+.flat-button:focus {
+  outline: auto;
+}
+
+
 
 .text-muted {
   opacity: .5;

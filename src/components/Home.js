@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import Header from "./Header";
-import PollItem from "./PoolItem";
+import PollItem from "./PolItem";
 
 const Home = () => {
   return (

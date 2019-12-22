@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "./components/Home";
+import NewQuestion from "./components/NewQuestion";
 
 
 function App() {
   return (
-    <Home />
+    <NewQuestion />
   )
 }
 
