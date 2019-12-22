@@ -9,7 +9,7 @@ const PollItem = () => {
           <span className="poll-avatar user1 mr-3"></span>
           <Media.Body>
             <h5 className="media-title">Michel Reyes <small>asks</small></h5>
-            <p className="text-muted mt-3 mb-0">Would you rather</p>
+            <p className="text-muted mt-3 mb-0">Would you rather?</p>
             <p className="m-0 p-0">
               Be front-end developer or...
             </p>
