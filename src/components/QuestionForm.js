@@ -24,9 +24,7 @@ const QuestionForm = () => {
                     <input id="question1" name="question" type="radio" />
                     <span className="question-control-checkmark mx-3"></span>
                     <span className="question-control-text">
-                      Option Two is a large option visible in this component but
-                      we can meke it a little big longer. rge option visible in
-                      this component but we can meke
+                      Option One
                     </span>
                     <span className="question-control-border"></span>
                   </label>
