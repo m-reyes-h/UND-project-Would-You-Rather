@@ -67,6 +67,7 @@ body {
   height: 64px;
   width: 64px;
   display: inline-block;
+  border-radius: 50%;
 }
 
 .media-title {
@@ -91,8 +92,10 @@ body {
   opacity: .54;
 }
 
-.newq-subtitle {
+.newq-subtitle,
+.questionf-subtitle {
   font-weight: 400;
+  opacity: .54;
 }
 
 .newq-content .question-control {
@@ -111,6 +114,72 @@ body {
 .newq-content .question-control::placeholder {
   color: rgba(0,0,0,.27);
   opacity: 1;
+}
+
+/**
+ * Question Form
+ */
+
+.questionf-title {
+  font-weight: 300;
+}
+
+.question-control-group {
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,.125);
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+
+.question-control-group input ~ .question-control-checkmark {
+  background-image: url("./icons/circle_outline-24px.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  padding: 0 .5rem;
+}
+
+.question-control-group input ~.question-control-text {
+  font-weight: 500;
+}
+
+.question-control-group input:checked ~ .question-control-checkmark {
+  background-image: url("./icons/check_circle_outline-24px.svg");
+}
+
+.question-control-group input ~ .question-control-border {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  right: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: inline-block;
+  transition: border .2s ease-in-out;
+  z-index: 2;
+}
+
+.question-control-group input:checked ~ .question-control-border {
+  border-color: #4285F4;
+}
+
+.question-control-group input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 
@@ -154,8 +223,6 @@ body {
 .flat-button:focus {
   outline: auto;
 }
-
-
 
 .text-muted {
   opacity: .5;

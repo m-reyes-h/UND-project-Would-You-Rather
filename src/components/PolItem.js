@@ -6,7 +6,7 @@ const PollItem = () => {
     <Card className="mx-1 mb-4 home-poll">
       <Card.Body>
         <Media>
-          <span className="poll-avatar rounded-circle user1 mr-3"></span>
+          <span className="poll-avatar user1 mr-3"></span>
           <Media.Body>
             <h5 className="media-title">Michel Reyes <small>asks</small></h5>
             <p className="text-muted mt-3 mb-0">Would you rather</p>

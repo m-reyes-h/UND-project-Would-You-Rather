@@ -1,10 +1,10 @@
 import React from "react";
-import NewQuestion from "./components/NewQuestion";
+import QuestionForm from "./components/QuestionForm";
 
 
 function App() {
   return (
-    <NewQuestion />
+    <QuestionForm />
   )
 }
 
