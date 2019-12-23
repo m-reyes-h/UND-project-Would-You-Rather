@@ -1,11 +1,9 @@
 import React from "react";
-import QuestionForm from "./components/QuestionForm";
+import Leaderboard from "./components/Leaderboard";
 
 
 function App() {
-  return (
-    <QuestionForm />
-  )
+  return <Leaderboard />;
 }
 
 export default App;

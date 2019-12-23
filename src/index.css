@@ -122,7 +122,8 @@ body {
  */
 
 .questionf-title,
-.poll-result-title {
+.poll-result-title,
+.leader-title {
   font-weight: 300;
 }
 
@@ -145,10 +146,10 @@ body {
   background-repeat: no-repeat;
   background-size: center;
   display: inline-block;
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
   display: inline-block;
-  padding: 0 .2rem;
+  padding: 0 16px;
 }
 
 .question-control-group input ~.question-control-text {
@@ -193,6 +194,10 @@ body {
  * Poll Result
  */
 
+.poll-result-inner {
+  border-radius: 8px;
+}
+
 .poll-result-box {
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,.125);
@@ -217,15 +222,58 @@ body {
 }
 
 /**
+ * Leaderboard
+ */
+
+.leader-card {
+  border-radius: 8px;
+  width: calc(33% - 24px);
+}
+
+.leader-score {
+  opacity: .8;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.leader-card small {
+  font-size: 75%;
+  text-transform: uppercase;
+  opacity: .74;
+  letter-spacing: 0.085rem;
+}
+
+.trophy.gold {
+  fill: #FFBF00;
+}
+
+.trophy.silver {
+  fill:#DBDDE0;
+}
+
+.trophy.bronze {
+  fill:#E7CFAE;
+}
+
+/**
  * Utils
  */
 
-.user1 {
+.user1, .user2, .user3 {
   background-image: url("./icons/user1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f2f2f2;
+}
+
+.user2 {
+  background-image: url("./icons/user2.png");
+}
+
+.user3 {
+  background-image: url("./icons/user3.png");
 }
 
 .logo {
@@ -258,7 +306,7 @@ body {
 }
 
 .text-muted {
-  opacity: .5;
+  opacity: .60;
 }
 
 .poll-result-box .progress {
