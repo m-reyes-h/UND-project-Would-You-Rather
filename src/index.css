@@ -257,6 +257,29 @@ body {
 }
 
 /**
+ * Login
+ */
+
+.login-content .logo {
+  background-size: 32px;
+}
+
+.login-title {
+  opacity: .64;
+}
+
+.login-content .poll-avatar {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.login-content .poll-avatar:hover,
+.login-content .poll-avatar:focus {
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+/**
  * Utils
  */
 

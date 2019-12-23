@@ -1,9 +1,9 @@
 import React from "react";
-import Leaderboard from "./components/Leaderboard";
+import Login from "./components/Login";
 
 
 function App() {
-  return <Leaderboard />;
+  return <Login />;
 }
 
 export default App;
