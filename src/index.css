@@ -260,6 +260,10 @@ body {
  * Login
  */
 
+.login-content-inner {
+  border-radius: 8px;
+}
+
 .login-content .logo {
   background-size: 32px;
 }

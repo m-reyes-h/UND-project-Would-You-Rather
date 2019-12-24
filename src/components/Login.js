@@ -12,7 +12,7 @@ const Login = () => {
             <h4 className="mb-4 p-0 login-title font-weight-normal">
               Would You Rather App
             </h4>
-            <div className="shadow-sm bg-white p-5">
+            <div className="login-content-inner shadow-sm bg-white p-5">
               <h5 className="questionf-subtitle mb-5">
                 Select one character to login
               </h5>
