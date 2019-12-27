@@ -250,7 +250,7 @@ For the Leaderboard List Component we need the list of all the users.
 
 ## Step - 4 Data and the Store
 
-#### Data elements and list of dependencies
+### Data elements and list of dependencies
 
 * Users
 * Questions
@@ -261,12 +261,32 @@ For the Leaderboard List Component we need the list of all the users.
 |Components       |Users|Questions|AuthedUser|Text|Option|
 |-----------------|-----|---------|----------|----|------|
 |App              |  x  |    x    |          |    |      |
-|Login            |  x  |         |          |    |      |
-|Poll Lits        |  x  |    x    |          |    |      |
-|Poll             |  x  |         |          |    |      |
-|New Poll         |     |         |          |    |      |
-|Poll Question    |     |         |          |    |      |
-|Poll Result      |     |         |          |    |      |
-|Leaderboard List |     |         |          |    |      |
-|Leaderboard Card |     |         |          |    |      |
-|Nav              |     |         |          |    |      |
+|Login            |  x  |         |     x    |    |      |
+|Poll Lits        |  x  |    x    |     x    |    |      |
+|Poll             |  x  |    x    |          |    |      |
+|New Poll         |     |         |     x    | x  |      |
+|Poll Question    |  x  |    x    |          |    |  x   |
+|Poll Result      |  x  |    x    |     x    |    |      |
+|Leaderboard List |  x  |         |          |    |      |
+|Leaderboard Card |  x  |         |          |    |      |
+|Nav              |     |         |     x    |    |      |
+
+---
+
+### Store
+
+For each piece of data, let's see whether is used by multiple components or mutated in a complex way.
+
+**Text** and **Option** used by New Poll and Poll Question components, do not mutate in a complex way. That means that it's great candidate for component state instead of app state that resides in teh store.
+
+**Users**, **Questions** and **AuthedUser** are used by multiple components and mutate in a complex way or is accessed globally, all this data is perfectly suited for the store.
+
+### Data elements separated by store or by component state
+
+* **store**
+  * Users
+  * Questions
+  * AuthedUser
+* **component state**
+  * Text
+  * Option
