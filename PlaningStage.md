@@ -172,8 +172,8 @@ Let's _italicize_ the action, **bold** the data and actions between brakets".
 
 When the app load at the first time it needs to fill the store with data.
 
-- _get_ the **users** (`GET_USERS`)
-- _get_ the **questions** (`GET_QUESTIONS`)
+- _get_ the **users** (`RECEIVE_USERS`)
+- _get_ the **questions** (`RECEIVE_QUESTIONS`)
 
 ## Login Component
 
