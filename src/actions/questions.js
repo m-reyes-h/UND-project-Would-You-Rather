@@ -1,4 +1,5 @@
 import { _saveQuestion } from "../utils/_DATA";
+import {showLoading, hideLoading} from 'react-redux-loading-bar'
 export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
 export const ADD_QUESTION = "ADD_QUESTION";
 
@@ -41,17 +42,17 @@ export function handleSaveQuestion(optionOneText, optionTwoText) {
   return (dispatch, getState) => {
     const { authUserd } = getState();
 
-    // loading
+    dispatch(showLoading());
 
     return _saveQuestion({ optionOneText, optionTwoText, authUserd })
       .then(question => {
         dispatch(saveQuestion(question));
       })
       .then(() => {
-        //loading
+        dispatch(hideLoading())
       })
       .catch(error => {
-        // loading
+        dispatch(hideLoading());
         console.log("There was an error adding the question", error);
       });
   };
