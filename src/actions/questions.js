@@ -3,14 +3,6 @@ import {showLoading, hideLoading} from 'react-redux-loading-bar'
 export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
 export const ADD_QUESTION = "ADD_QUESTION";
 
-/**
- * receiveQuestions
- * receive questions when the initial data is loaded from the API
- * fill the questions store
- *
- * @param {array of objects} questions
- * @return Redux action
- */
 export function receiveQuestions(questions) {
   return {
     type: RECEIVE_QUESTIONS,
@@ -25,19 +17,6 @@ function saveQuestion(question) {
   };
 }
 
-
-//-----------------------------------------------------------------------------------------
-
-
-/**
- * handleSaveQuestion
- * save question in the API
- * add the new question to the store
- *
- * @param {string} optionOneText
- * @param {string} optionTwoText
- * @return {redux thunk}
- */
 export function handleSaveQuestion(optionOneText, optionTwoText) {
   return (dispatch, getState) => {
     const { authUserd } = getState();
