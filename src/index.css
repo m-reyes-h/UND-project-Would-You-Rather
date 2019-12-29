@@ -66,6 +66,8 @@ body {
 .poll-avatar {
   height: 64px;
   width: 64px;
+  min-width: 64px;
+  min-height: 64px;
   display: inline-block;
   border-radius: 50%;
 }
