@@ -1,10 +1,12 @@
 import React, { Fragment, Component } from "react";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
-import Header from "./Header";
+import Header from "../containers/Header";
 import PollItem from "./PolItem";
 
 class Home extends Component {
+
   render() {
+
     return (
       <Fragment>
         <Header />

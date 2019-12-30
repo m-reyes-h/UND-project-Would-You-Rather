@@ -6,7 +6,7 @@ export default function authedUser(state = null, action) {
       return action.id;
 
     case UNSET_AUTHED_USER:
-      return state;
+      return null;
 
     default:
       return state;

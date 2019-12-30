@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Route, Redirect, withRouter  } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 
 // This container component is created based on react-router docs
 //https://reacttraining.com/react-router/web/api/Route/render-func
@@ -38,4 +38,4 @@ function mapStateToProps({ authedUser }) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(AuthedRoute));
+export default connect(mapStateToProps)(AuthedRoute);

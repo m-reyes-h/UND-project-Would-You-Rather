@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Header from "./Header";
+import Header from "../containers/Header";
 import LeaderBoardCard from './LeaderBoardCard';
 
 const Leaderboard = () => {

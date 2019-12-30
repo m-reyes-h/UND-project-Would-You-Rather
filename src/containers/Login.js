@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import { setAuthedUser } from "../actions/authedUser";
-import { Redirect, withRouter } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import LoginUser from "../components/LoginUser";
 
 class Login extends Component {
@@ -64,4 +64,4 @@ function mapStateToProps({ users }) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(Login));
+export default connect(mapStateToProps)(Login);
