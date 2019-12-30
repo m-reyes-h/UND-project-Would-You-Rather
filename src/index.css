@@ -10,6 +10,13 @@ body {
   padding: 4.5rem 0 1rem;
 }
 
+.loading {
+  height: 5px;
+  position: absolute;
+  top: 0;
+  background-color: #4285f4;
+}
+
 /**
  * Navbar
  */

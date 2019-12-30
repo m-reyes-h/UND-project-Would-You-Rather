@@ -2,24 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import { setAuthedUser } from "../actions/authedUser";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 import LoginUser from "../components/LoginUser";
 
 class Login extends Component {
   state = {
-    toHome: false
+    redirect: false
   };
 
   handleSignInUser = id => {
     this.props.dispatch(setAuthedUser(id));
     this.setState({
-      toHome: true
+      redirect: true
     });
   };
 
   render() {
-    if (this.state.toHome) {
-      return <Redirect to="/home" />;
+    const { referrer } = this.props.location.state || {
+      referrer: { pathname: "/home" }
+    };
+
+    if (this.state.redirect === true ) {
+      return <Redirect to={referrer} />;
     }
 
     return (
@@ -60,4 +64,4 @@ function mapStateToProps({ users }) {
   };
 }
 
-export default connect(mapStateToProps)(Login);
+export default withRouter(connect(mapStateToProps)(Login));
