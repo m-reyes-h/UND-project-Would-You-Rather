@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Header from "./Header";
+import Header from "../containers/Header";
 
 const QuestionForm = () => {
   return (

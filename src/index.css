@@ -130,6 +130,10 @@ body {
  * Question Form
  */
 
+.questionf-content form {
+  border-radius: 8px;
+}
+
 .questionf-title,
 .poll-result-title,
 .leader-title {
@@ -211,6 +215,17 @@ body {
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,.125);
   padding: 0 1rem .5rem;
+  position: relative;
+}
+
+.poll-result-box.active:before {
+  content: "YOUR VOTE";
+  display: inline-block;
+  padding: .2rem .7rem;
+  background-color: #E8F0FE;
+  color: #4285F4;
+  border-radius: 0 0 8px 8px;
+  font-size: 85%;
 }
 
 .poll-result-box.active {
@@ -222,13 +237,6 @@ body {
   font-size: 1.3rem;
 }
 
-.poll-box-voted {
-  display: inline-block;
-  padding: .2rem .7rem;
-  background-color: #E8F0FE;
-  color: #4285F4;
-  border-radius: 0 0 8px 8px;
-}
 
 /**
  * Leaderboard

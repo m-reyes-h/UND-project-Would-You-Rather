@@ -1,15 +1,17 @@
 import React from "react";
 import { Card, Media } from "react-bootstrap";
-import { connect } from "react-redux";
-import {withRouter, Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
-const PollItem = ({ question, users }) => {
-  console.log(question);
+const PollItem = ({ authedUser, question, users }) => {
+  const isPollResult =
+    question.optionOne.votes.includes(authedUser) ||
+    question.optionTwo.votes.includes(authedUser);
+
   return (
     <Card className="mx-1 mb-4 home-poll">
       <Card.Body>
         <Media>
-          <span className="poll-avatar user1 mr-3"></span>
+          <span className={`poll-avatar ${users[question.author].avatarURL} mr-3`}></span>
           <Media.Body>
             <h5 className="media-title">
               {users[question.author].name} <small>asks</small>
@@ -20,7 +22,13 @@ const PollItem = ({ question, users }) => {
         </Media>
       </Card.Body>
       <Card.Footer>
-        <Link to={`/question:${question.id}`} className="d-inline-block w-100 h-100 text-center">
+        <Link
+          to={{
+            pathname: `/questions/${question.id}`,
+            state: { isPollResult, question }
+          }}
+          className="d-inline-block w-100 h-100 text-center"
+        >
           View Poll
         </Link>
       </Card.Footer>
@@ -28,11 +36,4 @@ const PollItem = ({ question, users }) => {
   );
 };
 
-function mapStateToProps({ questions, users }, { questionId }) {
-  return {
-    question: questions[questionId],
-    users
-  };
-}
-
-export default withRouter(connect(mapStateToProps)(PollItem));
+export default PollItem;

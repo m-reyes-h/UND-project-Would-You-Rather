@@ -2,7 +2,7 @@ import React, { Fragment, Component } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import Header from "../containers/Header";
-import PollItem from "./PolItem";
+import PollItemContainer from "../containers/PolItemContainer";
 
 class Home extends Component {
   render() {
@@ -18,18 +18,21 @@ class Home extends Component {
                 <Tabs defaultActiveKey="uaquestions" className="home-tabs">
                   <Tab
                     eventKey="uaquestions"
-                    title={`Unasnwered questions (${answeredQuestions.length})`}
+                    title={`Unasnwered questions (${unansweredQuestions.length})`}
                   >
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {answeredQuestions.map(qid => (
-                        <PollItem key={qid} questionId={qid} />
+                      {unansweredQuestions.map(qid => (
+                        <PollItemContainer key={qid} questionId={qid} />
                       ))}
                     </div>
                   </Tab>
-                  <Tab eventKey="aquestions" title={`Asnwered questions (${unansweredQuestions.length})`}>
+                  <Tab
+                    eventKey="aquestions"
+                    title={`Asnwered questions (${answeredQuestions.length})`}
+                  >
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {unansweredQuestions.map(qid => (
-                        <PollItem key={qid} questionId={qid} />
+                      {answeredQuestions.map(qid => (
+                        <PollItemContainer key={qid} questionId={qid} />
                       ))}
                     </div>
                   </Tab>

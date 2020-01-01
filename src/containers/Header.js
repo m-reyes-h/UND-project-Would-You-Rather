@@ -32,7 +32,7 @@ class Header extends Component {
               </NavLink>
             </Nav>
             <Nav className="ml-auto">
-              <Nav.Link href="#link">User</Nav.Link>
+              <span className="navbar-text">{this.props.user}</span>
               <Nav.Link href="#link" onClick={this.handleSignOutUser}>
                 Logout
               </Nav.Link>
@@ -44,4 +44,9 @@ class Header extends Component {
   }
 }
 
-export default withRouter(connect()(Header));
+function mapStateToProps({ authedUser, users }) {
+  return {
+    user: users[authedUser].name
+  };
+}
+export default withRouter(connect(mapStateToProps)(Header));
