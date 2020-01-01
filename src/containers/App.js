@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
-import Leaderboard from "./Leaderboard";
-import NoMatch from './NoMatch';
-import Home from "./Home";
-import Login from "../containers/Login";
-import AuthedRoute from '../containers/AuthedRoute'
+import Leaderboard from "../components/Leaderboard";
+import NoMatch from '../components/NoMatch';
+import Home from "../components/Home";
+import Login from "./Login";
+import AuthedRoute from './AuthedRoute'
 
 class App extends Component {
   componentDidMount() {

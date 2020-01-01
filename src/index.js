@@ -6,7 +6,7 @@ import reducers from "./reducers/";
 import middlewares from "./middleware";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
-import App from "./components/App";
+import App from "./containers/App";
 
 const store = createStore(reducers, middlewares);
 

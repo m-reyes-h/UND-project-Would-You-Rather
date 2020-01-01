@@ -1,11 +1,12 @@
 import React, { Fragment, Component } from "react";
+import { connect } from "react-redux";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import Header from "../containers/Header";
 import PollItem from "./PolItem";
 
 class Home extends Component {
-
   render() {
+    const { answeredQuestions, unansweredQuestions } = this.props;
 
     return (
       <Fragment>
@@ -15,17 +16,20 @@ class Home extends Component {
             <Col lg={{ span: 8, offset: 2 }}>
               <div className="shadow-sm bg-white home-content mt-5">
                 <Tabs defaultActiveKey="uaquestions" className="home-tabs">
-                  <Tab eventKey="uaquestions" title="Unasnwered questions">
+                  <Tab
+                    eventKey="uaquestions"
+                    title={`Unasnwered questions (${answeredQuestions.length})`}
+                  >
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {new Array("1", "2", "3").map(item => (
-                        <PollItem />
+                      {answeredQuestions.map(qid => (
+                        <PollItem key={qid} questionId={qid} />
                       ))}
                     </div>
                   </Tab>
-                  <Tab eventKey="aquestions" title="Asnwered questions">
+                  <Tab eventKey="aquestions" title={`Asnwered questions (${unansweredQuestions.length})`}>
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {new Array("1").map(item => (
-                        <PollItem />
+                      {unansweredQuestions.map(qid => (
+                        <PollItem key={qid} questionId={qid} />
                       ))}
                     </div>
                   </Tab>
@@ -39,4 +43,19 @@ class Home extends Component {
   }
 }
 
-export default Home;
+function mapStateToProps({ authedUser, users, questions }) {
+  const user = users[authedUser];
+  const answeredQuestions = Object.keys(user.answers).sort(
+    (a, b) => questions[a].timestamp - questions[b].timestamp
+  );
+  const unansweredQuestions = Object.keys(questions)
+    .filter(qid => !answeredQuestions.includes(qid))
+    .sort((a, b) => questions[a].timestamp - questions[b].timestamp);
+
+  return {
+    answeredQuestions,
+    unansweredQuestions
+  };
+}
+
+export default connect(mapStateToProps)(Home);
