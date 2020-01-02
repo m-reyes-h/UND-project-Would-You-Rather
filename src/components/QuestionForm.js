@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Header from "../containers/Header";
 import { handleSaveQuestionAnswer } from "../actions/shared";
-import { withRouter, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 class QuestionForm extends Component {
   state = { option: null };

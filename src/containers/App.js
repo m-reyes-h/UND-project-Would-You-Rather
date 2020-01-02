@@ -9,6 +9,7 @@ import Home from "../components/Home";
 import Login from "./Login";
 import AuthedRoute from "./AuthedRoute";
 import QuestionContainer from "./QuestionContainer";
+import NewQuestion from "./NewQuestion";
 
 class App extends Component {
   componentDidMount() {
@@ -27,6 +28,7 @@ class App extends Component {
             path="/questions/:question_id"
             component={QuestionContainer}
           />
+          <AuthedRoute path="/add" component={NewQuestion} />
           <Route component={NoMatch} />
         </Switch>
       </Router>
