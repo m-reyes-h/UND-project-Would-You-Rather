@@ -5,8 +5,12 @@ import PollResult from "../components/PollResult";
 import QuestionForm from "../components/QuestionForm";
 
 const PollDetails = props => {
-  const { isPollResult, question } = props.location.state;
-  const { users, authedUser } = props;
+  const { users, authedUser, questions, match } = props;
+  const question = questions[match.params.question_id];
+
+  const isPollResult =
+    question.optionOne.votes.includes(authedUser) ||
+    question.optionTwo.votes.includes(authedUser);
 
   return isPollResult ? (
     <PollResult authedUser={authedUser} users={users} question={question} />
@@ -15,8 +19,9 @@ const PollDetails = props => {
   );
 };
 
-function mapStateToProps({ authedUser, users }) {
+function mapStateToProps({ authedUser, users, questions }) {
   return {
+    questions,
     authedUser,
     users
   };

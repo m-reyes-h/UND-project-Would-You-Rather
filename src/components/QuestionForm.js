@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import Header from "../containers/Header";
 import { handleSaveQuestionAnswer } from "../actions/shared";
-import {withRouter} from 'react-router-dom'
+import { withRouter, Redirect } from "react-router-dom";
 
 class QuestionForm extends Component {
   state = { option: null };
@@ -18,11 +18,11 @@ class QuestionForm extends Component {
     dispatch(
       handleSaveQuestionAnswer(authedUser, question.id, this.state.option)
     );
-    
   };
 
   render() {
     const { users, question } = this.props;
+
     return (
       <Fragment>
         <Header />
