@@ -1,4 +1,5 @@
 export const RECEIVE_USERS = "RECEIVE_USERS";
+export const USER_ANSWER_QUESTION = "USER_ANSWER_QUESTION";
 
 export function receiveUsers(users) {
   return {
@@ -6,4 +7,16 @@ export function receiveUsers(users) {
     users
   };
 }
+
+export function saveUserAnswer(authedUser, qid, answer) {
+  return {
+    type: USER_ANSWER_QUESTION,
+    authedUser,
+    qid,
+    answer
+  };
+}
+
+
+
 

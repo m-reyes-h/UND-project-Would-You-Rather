@@ -7,8 +7,8 @@ const PollResult = ({ authedUser, question, users }) => {
   const optionOneVotes = question.optionOne.votes;
   const optionTwoVotes = question.optionTwo.votes;
   const totalVotes = optionOneVotes.length + optionTwoVotes.length;
-  const optionOnePercent = (optionOneVotes.length * 100) / totalVotes;
-  const optionTwoPercent = (optionTwoVotes.length * 100) / totalVotes;
+  const optionOnePercent = ((optionOneVotes.length * 100) / totalVotes).toFixed();
+  const optionTwoPercent = ((optionTwoVotes.length * 100) / totalVotes).toFixed();
 
   return (
     <Fragment>

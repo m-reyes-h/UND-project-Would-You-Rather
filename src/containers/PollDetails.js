@@ -11,7 +11,7 @@ const PollDetails = props => {
   return isPollResult ? (
     <PollResult authedUser={authedUser} users={users} question={question} />
   ) : (
-    <QuestionForm />
+    <QuestionForm authedUser={authedUser} users={users} question={question} />
   );
 };
 

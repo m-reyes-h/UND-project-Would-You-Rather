@@ -48,11 +48,13 @@ body {
   color: #5a5a5a;
 }
 
+
 .home-tabs.nav-tabs .nav-item.show .nav-link,
 .home-tabs.nav-tabs .nav-link.active {
   border-bottom-color:#4285f4;
   color: #4285F4;
   font-weight: 500;
+  border-radius: 8px 8px 0 0;
 }
 
 .home-poll {
@@ -95,6 +97,7 @@ body {
 .newq-content form {
   border-radius: 8px;
 }
+
 
 .newq-title {
   font-weight: 300;
@@ -339,7 +342,7 @@ body {
   border-radius: 0;
   border-top: 1px solid rgba(0,0,0,.125) !important;
   height: 3.5rem;
-  color: #4285F4 !important;
+  color: #4285F4;
   background-color: transparent !important;
   box-shadow: none;
 }
@@ -347,6 +350,11 @@ body {
 .flat-button:active,
 .flat-button:focus {
   outline: auto;
+}
+
+.flat-button:disabled {
+  color: rgba(0,0,0,.32) !important;
+  cursor: not-allowed;
 }
 
 .text-muted {
