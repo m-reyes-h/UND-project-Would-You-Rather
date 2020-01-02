@@ -1,14 +1,20 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "../containers/Header";
-import PollResultCard from "./PollResultCard";
+import QuestionResultCard from "./QuestionResultCard";
 
-const PollResult = ({ authedUser, question, users }) => {
+const QuestionResult = ({ authedUser, question, users }) => {
   const optionOneVotes = question.optionOne.votes;
   const optionTwoVotes = question.optionTwo.votes;
   const totalVotes = optionOneVotes.length + optionTwoVotes.length;
-  const optionOnePercent = ((optionOneVotes.length * 100) / totalVotes).toFixed();
-  const optionTwoPercent = ((optionTwoVotes.length * 100) / totalVotes).toFixed();
+  const optionOnePercent = (
+    (optionOneVotes.length * 100) /
+    totalVotes
+  ).toFixed();
+  const optionTwoPercent = (
+    (optionTwoVotes.length * 100) /
+    totalVotes
+  ).toFixed();
 
   return (
     <Fragment>
@@ -30,7 +36,7 @@ const PollResult = ({ authedUser, question, users }) => {
                   Would you rather...
                 </h5>
 
-                <PollResultCard
+                <QuestionResultCard
                   text={question.optionOne.text}
                   active={optionOneVotes.includes(authedUser)}
                   totalVotes={totalVotes}
@@ -40,7 +46,7 @@ const PollResult = ({ authedUser, question, users }) => {
 
                 <div className="my-4">VS</div>
 
-                <PollResultCard
+                <QuestionResultCard
                   text={question.optionTwo.text}
                   active={optionTwoVotes.includes(authedUser)}
                   totalVotes={totalVotes}
@@ -56,4 +62,4 @@ const PollResult = ({ authedUser, question, users }) => {
   );
 };
 
-export default PollResult;
+export default QuestionResult;

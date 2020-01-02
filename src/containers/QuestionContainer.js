@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import PollResult from "../components/PollResult";
+import QuestionResult from "../components/QuestionResult";
 import QuestionForm from "../components/QuestionForm";
 
-const PollDetails = props => {
+const QuestionContainer = props => {
   const { users, authedUser, questions, match } = props;
   const question = questions[match.params.question_id];
 
@@ -13,7 +13,7 @@ const PollDetails = props => {
     question.optionTwo.votes.includes(authedUser);
 
   return isPollResult ? (
-    <PollResult authedUser={authedUser} users={users} question={question} />
+    <QuestionResult authedUser={authedUser} users={users} question={question} />
   ) : (
     <QuestionForm authedUser={authedUser} users={users} question={question} />
   );
@@ -27,4 +27,4 @@ function mapStateToProps({ authedUser, users, questions }) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(PollDetails));
+export default withRouter(connect(mapStateToProps)(QuestionContainer));

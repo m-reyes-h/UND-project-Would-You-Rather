@@ -8,7 +8,7 @@ import NoMatch from "../components/NoMatch";
 import Home from "../components/Home";
 import Login from "./Login";
 import AuthedRoute from "./AuthedRoute";
-import PollDetails from "./PollDetails";
+import QuestionContainer from "./QuestionContainer";
 
 class App extends Component {
   componentDidMount() {
@@ -23,7 +23,10 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <AuthedRoute path="/home" component={Home} />
           <AuthedRoute path="/leaderboard" component={Leaderboard} />
-          <AuthedRoute path="/questions/:question_id" component={PollDetails} />
+          <AuthedRoute
+            path="/questions/:question_id"
+            component={QuestionContainer}
+          />
           <Route component={NoMatch} />
         </Switch>
       </Router>

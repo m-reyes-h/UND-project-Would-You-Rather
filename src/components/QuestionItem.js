@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const PollItem = ({ question, users }) => {
+const QuestionItem = ({ question, users }) => {
   return (
     <Card className="mx-1 mb-4 home-poll">
       <Card.Body>
@@ -31,4 +31,4 @@ const PollItem = ({ question, users }) => {
   );
 };
 
-export default PollItem;
+export default QuestionItem;

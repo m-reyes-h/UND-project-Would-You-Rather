@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import {withRouter} from 'react-router-dom'
-import PollItem from '../components/PollItem'
+import QuestionItem from "../components/QuestionItem";
 
-const PollItemContainer = ({ authedUser, question, users }) => {
+const QuestionItemContainer = ({ authedUser, question, users }) => {
   return (
-    <PollItem authedUser={authedUser} question={question} users={users} />
+    <QuestionItem authedUser={authedUser} question={question} users={users} />
   );
 };
 
@@ -17,4 +17,4 @@ function mapStateToProps({ authedUser, questions, users }, { questionId }) {
   };
 }
 
-export default withRouter(connect(mapStateToProps)(PollItemContainer));
+export default withRouter(connect(mapStateToProps)(QuestionItemContainer));

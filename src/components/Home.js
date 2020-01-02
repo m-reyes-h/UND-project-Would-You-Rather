@@ -2,7 +2,7 @@ import React, { Fragment, Component } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
 import Header from "../containers/Header";
-import PollItemContainer from "../containers/PolItemContainer";
+import PollItemContainer from "../containers/QuestionItemContainer";
 
 class Home extends Component {
   render() {

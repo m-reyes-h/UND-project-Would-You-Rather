@@ -1,7 +1,7 @@
 import React from "react";
 import { ProgressBar } from "react-bootstrap";
 
-const PollResultCard = ({
+const QuestionResultCard = ({
   totalVotes,
   optionPercent,
   optionVotes,
@@ -22,4 +22,4 @@ const PollResultCard = ({
   );
 };
 
-export default PollResultCard;
+export default QuestionResultCard;
