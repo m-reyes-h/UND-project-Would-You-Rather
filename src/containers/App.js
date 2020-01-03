@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
-import Leaderboard from "../components/Leaderboard";
+import Leaderboard from "./Leaderboard";
 import NoMatch from "../components/NoMatch";
-import Home from "../components/Home";
+import Home from "./Home"
 import Login from "./Login";
 import AuthedRoute from "./AuthedRoute";
 import QuestionContainer from "./QuestionContainer";

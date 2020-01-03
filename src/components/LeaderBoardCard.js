@@ -1,10 +1,27 @@
-import React from 'react';
+import React from "react";
 
-const LeaderBoardcard = ({rank, user}) => {
+const LeaderBoardcard = ({ index, user }) => {
+  let rank = null;
+  switch (index) {
+    case 0:
+      rank = "gold";
+      break;
+    case 1:
+      rank = "silver";
+      break;
+
+    case 2:
+      rank = "bronze";
+      break;
+
+    default:
+      rank = "bronze";
+      break;
+  }
   return (
     <div className="leader-card shadow-sm bg-white pt-4 pb-2">
-      <span className={`poll-avatar ${user}`}></span>
-      <h5 className="leader-title mt-2">Michel Reyes</h5>
+      <span className={`poll-avatar ${user.avatarURL}`}></span>
+      <h5 className="leader-title mt-2">{user.name}</h5>
       <div className="d-flex justify-content-between px-4 mt-4">
         <div>
           <small>Rank</small>
@@ -24,7 +41,7 @@ const LeaderBoardcard = ({rank, user}) => {
         </div>
         <div>
           <small>Score</small>
-          <p className="leader-score">6</p>
+          <p className="leader-score">{user.score}</p>
         </div>
       </div>
 
@@ -33,16 +50,16 @@ const LeaderBoardcard = ({rank, user}) => {
         <div className="d-flex justify-content-between px-4">
           <div>
             <small>Answered</small>
-            <p className="leader-score">4</p>
+            <p className="leader-score">{user.answerSum}</p>
           </div>
           <div>
             <small>Created</small>
-            <p className="leader-score">6</p>
+            <p className="leader-score">{user.questionSum}</p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default LeaderBoardcard;
