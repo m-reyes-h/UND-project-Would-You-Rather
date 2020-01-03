@@ -29,7 +29,7 @@ class Login extends Component {
     return (
       <Container>
         <Row className="justufy-content-center">
-          <Col lg={{ span: 4, offset: 4 }}>
+          <Col lg={{ span: 6, offset: 3 }}>
             <div className="login-content mt-4 text-center">
               <span className="logo mb-2"></span>
               <h5 className="text-muted font-weight-light">Wellcome to the</h5>

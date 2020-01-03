@@ -25,13 +25,13 @@ class NewQuestionForm extends Component {
 
     return (
       <Form
-        autocomplete="off"
+        autoComplete="off"
         className="shadow-sm bg-white"
         onSubmit={this.handleOnSubmit}
       >
         {/* this input is to prevent autocompleted in the next inputs */}
         <input
-          autocomplete="false"
+          autoComplete="false"
           name="hidden"
           type="text"
           style={{ display: "none" }}
