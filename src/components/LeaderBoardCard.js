@@ -18,6 +18,9 @@ const LeaderBoardcard = ({ index, user }) => {
       rank = "bronze";
       break;
   }
+  const answerSum = Object.keys(user.answers).length;
+  const questionSum = user.questions.length;
+  const score = answerSum + questionSum;
   return (
     <div className="leader-card shadow-sm bg-white pt-4 pb-2">
       <span className={`poll-avatar ${user.avatarURL}`}></span>
@@ -41,7 +44,7 @@ const LeaderBoardcard = ({ index, user }) => {
         </div>
         <div>
           <small>Score</small>
-          <p className="leader-score">{user.score}</p>
+          <p className="leader-score">{score}</p>
         </div>
       </div>
 
@@ -50,11 +53,11 @@ const LeaderBoardcard = ({ index, user }) => {
         <div className="d-flex justify-content-between px-4">
           <div>
             <small>Answered</small>
-            <p className="leader-score">{user.answerSum}</p>
+            <p className="leader-score">{answerSum}</p>
           </div>
           <div>
             <small>Created</small>
-            <p className="leader-score">{user.questionSum}</p>
+            <p className="leader-score">{questionSum}</p>
           </div>
         </div>
       </div>
