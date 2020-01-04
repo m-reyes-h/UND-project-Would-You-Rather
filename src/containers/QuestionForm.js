@@ -6,6 +6,8 @@ import { handleSaveQuestionAnswer } from "../actions/shared";
 import { withRouter } from "react-router-dom";
 
 class QuestionForm extends Component {
+  // TODO, split questio form in container and component
+
   state = { option: null };
 
   handleChange = event => {

@@ -105,7 +105,8 @@ body {
  * New Question
  */
 
-.newq-content form {
+.newq-content form,
+.newu-content form {
   border-radius: 8px;
 }
 
@@ -116,12 +117,15 @@ body {
 
 .newq-subtitle,
 .questionf-subtitle,
+.login-subtitle,
+.newu-subtitle,
 .poll-result-subtitle {
   font-weight: 400;
   opacity: 0.54;
 }
 
-.newq-content .question-control {
+.newq-content .question-control,
+.newu-content .newu-control {
   height: 54px;
   position: relative;
   background-color: #f2f3f5;
@@ -130,11 +134,13 @@ body {
   box-shadow: none;
 }
 
-.newq-content .question-control:focus {
+.newq-content .question-control:focus,
+.newu-content .newu-control:focus {
   border-bottom-color: #4285f4;
 }
 
-.newq-content .question-control::placeholder {
+.newq-content .question-control::placeholder,
+.newu-content .newu-control::placeholder {
   color: rgba(0, 0, 0, 0.27);
   opacity: 1;
 }
@@ -153,7 +159,8 @@ body {
   font-weight: 300;
 }
 
-.question-control-group {
+.question-control-group,
+.avatar-control-group {
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.125);
   display: inline-block;
@@ -165,8 +172,26 @@ body {
   text-align: left;
 }
 
+.avatar-control-group {
+  width: 68px;
+  height: 68px;
+  min-height: 68px;
+  min-width: 68px;
+  padding: 0;
+  text-align: center;
+  border-radius: 50%;
+  border-color: transparent;
+}
 
-.question-control-group input ~ .question-control-checkmark {
+.avatar-control-group .poll-avatar {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+}
+
+
+.question-control-group input ~ .question-control-checkmark,
+.avatar-control-group input ~ .avatar-control-checkmark {
   background-image: url("./icons/circle_outline-24px.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -178,15 +203,31 @@ body {
   padding: 0 16px;
 }
 
+.avatar-control-group input ~ .avatar-control-checkmark {
+  background-image: url("./icons/check_circle-24px.svg");
+  position: absolute;
+  top: -9px;
+  right: -24px;
+  visibility: hidden;
+}
+
 .question-control-group input ~ .question-control-text {
   font-weight: 500;
 }
 
-.question-control-group input:checked ~ .question-control-checkmark {
+.question-control-group input:checked ~ .question-control-checkmark,
+.avatar-control-group input:checked ~ .avatar-control-checkmark {
   background-image: url("./icons/check_circle_outline-24px.svg");
 }
 
-.question-control-group input ~ .question-control-border {
+.avatar-control-group input:checked ~ .avatar-control-checkmark {
+  background-image: url("./icons/check_circle-24px.svg");
+  visibility: visible;
+  z-index: 2;
+}
+
+.question-control-group input ~ .question-control-border,
+.avatar-control-group input ~ .avatar-control-border {
   position: absolute;
   top: -1px;
   bottom: -1px;
@@ -200,11 +241,17 @@ body {
   z-index: 2;
 }
 
-.question-control-group input:checked ~ .question-control-border {
+.avatar-control-group input ~ .avatar-control-border {
+  border-radius: 50%;
+}
+
+.question-control-group input:checked ~ .question-control-border,
+.avatar-control-group input:checked ~ .avatar-control-border {
   border-color: #4285f4;
 }
 
-.question-control-group input {
+.question-control-group input,
+.avatar-control-group input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -212,7 +259,8 @@ body {
   width: 0;
 }
 
-.question-control-group input:focus ~ .question-control-border {
+.question-control-group input:focus ~ .question-control-border,
+.avatar-control-group input:focus ~ .avatar-control-border {
   border-color: #4285f4;
 }
 
@@ -317,7 +365,10 @@ body {
 
 .user1,
 .user2,
-.user3 {
+.user3,
+.new1,
+.new2,
+.new3 {
   background-image: url("./icons/user1.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -331,6 +382,18 @@ body {
 
 .user3 {
   background-image: url("./icons/user3.png");
+}
+
+.new1 {
+  background-image: url("./icons/new1.png");
+}
+
+.new2 {
+  background-image: url("./icons/new2.png");
+}
+
+.new3 {
+  background-image: url("./icons/new3.png");
 }
 
 .logo {

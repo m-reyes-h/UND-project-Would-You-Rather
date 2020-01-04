@@ -207,3 +207,42 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
     }, 500);
   });
 }
+
+function generateUserID(firstName, lastName) {
+  return (firstName + "" + lastName).replace(/\s/g, "").toLowerCase();
+}
+
+function formatName(name) {
+  return name
+    .trim()
+    .toLowerCase()
+    .replace(/^\w/, c => c.toUpperCase());
+}
+
+function formatUser({ firstName, lastName, avatarURL }) {
+  const userID = generateUserID(firstName, lastName);
+  const name = formatName(firstName) + " " + formatName(lastName);
+
+  return {
+    id: userID,
+    name,
+    avatarURL,
+    answers: {},
+    questions: []
+  };
+}
+
+export function _saveUser(user) {
+  const formatedUser = formatUser(user);
+
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      users = {
+        ...users,
+        [formatedUser.id]: formatedUser
+      };
+
+      res(formatedUser);
+    }, 500);
+  });
+}

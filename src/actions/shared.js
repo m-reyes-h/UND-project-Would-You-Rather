@@ -1,12 +1,12 @@
 import { showLoading, hideLoading } from "react-redux-loading-bar";
+import { receiveQuestions, addQuestionAnswer, addQuestion } from "./questions";
+import { receiveUsers, addUserAnswer, addUserQuestion, addUser } from "./users";
 import {
-  receiveQuestions,
-  addQuestionAnswer,
-  addQuestion
-} from "./questions";
-import { receiveUsers, addUserAnswer, addUserQuestion } from "./users";
-import { getInitialData, saveQuestion, saveQuestionAnswerAPI } from "../utils/api";
-
+  getInitialData,
+  saveQuestion,
+  saveQuestionAnswerAPI,
+  saveUser
+} from "../utils/api";
 
 export function handleInitialData() {
   return dispatch => {
@@ -59,6 +59,24 @@ export function handleSaveQuestion(optionOneText, optionTwoText) {
       .catch(error => {
         dispatch(hideLoading());
         console.log("There was an error adding the question", error);
+      });
+  };
+}
+
+export function handleSaveUser(firstName, lastName, avatarURL) {
+  return dispatch => {
+    dispatch(showLoading());
+
+    return saveUser({ firstName, lastName, avatarURL })
+      .then(user => {
+        dispatch(addUser(user));
+      })
+      .then(() => {
+        dispatch(hideLoading());
+      })
+      .catch(error => {
+        dispatch(hideLoading());
+        console.log("There was an error adding a new user", error);
       });
   };
 }

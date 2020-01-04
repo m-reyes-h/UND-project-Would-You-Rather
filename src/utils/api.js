@@ -2,7 +2,8 @@ import {
   _getQuestions,
   _getUsers,
   _saveQuestionAnswer,
-  _saveQuestion
+  _saveQuestion,
+  _saveUser
 } from "./_DATA";
 
 export function getInitialData() {
@@ -24,4 +25,8 @@ export function saveQuestion({
 
 export function saveQuestionAnswerAPI({ authedUser, qid, answer }) {
   return _saveQuestionAnswer({ authedUser, qid, answer });
+}
+
+export function saveUser({firstName, lastName, avatarURL}) {
+  return _saveUser({firstName, lastName, avatarURL});
 }

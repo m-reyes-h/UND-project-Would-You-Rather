@@ -5,11 +5,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
 import Leaderboard from "./Leaderboard";
 import NoMatch from "../components/NoMatch";
-import Home from "./Home"
+import Home from "./Home";
 import Login from "./Login";
 import AuthedRoute from "./AuthedRoute";
 import QuestionContainer from "./QuestionContainer";
 import NewQuestion from "./NewQuestion";
+import NewUserContainer from "./NewUserContainer";
 
 class App extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ class App extends Component {
         <LoadingBar className="loading" />
         <Switch>
           <Route exact path="/" component={Login} />
+          <Route exact path="/newuser" component={NewUserContainer} />
           <AuthedRoute path="/home" component={Home} />
           <AuthedRoute path="/leaderboard" component={Leaderboard} />
           <AuthedRoute

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import { setAuthedUser } from "../actions/authedUser";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import LoginUser from "../components/LoginUser";
 
 class Login extends Component {
@@ -22,7 +22,7 @@ class Login extends Component {
       referrer: { pathname: "/home" }
     };
 
-    if (this.state.redirect === true ) {
+    if (this.state.redirect === true) {
       return <Redirect to={referrer} />;
     }
 
@@ -37,7 +37,7 @@ class Login extends Component {
                 Would You Rather App
               </h4>
               <div className="login-content-inner shadow-sm bg-white p-5">
-                <h5 className="questionf-subtitle mb-5">
+                <h5 className="login-subtitle mb-5">
                   Select one character to login
                 </h5>
                 <div className="d-flex justify-content-center pb-4">
@@ -50,6 +50,7 @@ class Login extends Component {
                   ))}
                 </div>
               </div>
+              <Link to="/newuser">New user</Link>
             </div>
           </Col>
         </Row>

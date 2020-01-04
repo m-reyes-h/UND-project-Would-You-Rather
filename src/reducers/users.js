@@ -1,7 +1,8 @@
 import {
   RECEIVE_USERS,
   USER_ANSWER_QUESTION,
-  ADD_USER_QUESTION
+  ADD_USER_QUESTION,
+  ADD_USER
 } from "../actions/users";
 
 export default function users(state = {}, action) {
@@ -31,6 +32,11 @@ export default function users(state = {}, action) {
           questions: [...state[authedUser].questions, qid]
         }
       };
+
+    case ADD_USER:
+      return {
+        ...state, [action.user.id]: action.user
+      }
 
     default:
       return state;

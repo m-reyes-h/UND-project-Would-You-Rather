@@ -1,6 +1,7 @@
 export const RECEIVE_USERS = "RECEIVE_USERS";
 export const USER_ANSWER_QUESTION = "USER_ANSWER_QUESTION";
 export const ADD_USER_QUESTION = "SAVE_USER_QUESTION";
+export const ADD_USER = "ADD_USER";
 
 export function receiveUsers(users) {
   return {
@@ -23,5 +24,12 @@ export function addUserQuestion(authedUser, qid) {
     type: ADD_USER_QUESTION,
     authedUser,
     qid
+  };
+}
+
+export function addUser(user) {
+  return {
+    type: ADD_USER,
+    user
   };
 }

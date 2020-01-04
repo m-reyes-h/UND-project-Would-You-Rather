@@ -3,6 +3,7 @@
 ## Step 1 - Identify Each View
 
 Determine look and functionality of each view in the app.
+All images from https://www.freepik.com/free-vector/
 
 ## View for the Login page
 
