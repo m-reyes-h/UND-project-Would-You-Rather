@@ -12,6 +12,8 @@ class Header extends Component {
   };
 
   render() {
+    console.log(this.props);
+    const {name, avatarURL} = this.props.user;
     return (
       <Navbar className="app-navbar shadow-sm" expand="md" fixed="top">
         <Container>
@@ -31,8 +33,11 @@ class Header extends Component {
                 Leaderboard
               </NavLink>
             </Nav>
-            <Nav className="ml-auto">
-              <span className="navbar-text">{this.props.user}</span>
+            <Nav className="ml-auto d-flex align-items-center">
+              <span className="navbar-text d-flex align-items-center mr-3">
+                Hello, {name}
+                <span className={`navbar-user-avatar ${avatarURL}`}></span>
+              </span>
               <Nav.Link href="#link" onClick={this.handleSignOutUser}>
                 Logout
               </Nav.Link>
@@ -46,7 +51,7 @@ class Header extends Component {
 
 function mapStateToProps({ authedUser, users }) {
   return {
-    user: users[authedUser].name
+    user: users[authedUser]
   };
 }
 export default withRouter(connect(mapStateToProps)(Header));

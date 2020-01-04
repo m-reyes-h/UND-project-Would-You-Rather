@@ -29,7 +29,7 @@ class App extends Component {
             component={QuestionContainer}
           />
           <AuthedRoute path="/add" component={NewQuestion} />
-          <Route component={NoMatch} />
+          <AuthedRoute component={NoMatch} />
         </Switch>
       </Router>
     );

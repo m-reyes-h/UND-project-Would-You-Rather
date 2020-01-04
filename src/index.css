@@ -74,13 +74,22 @@ body {
   line-height: 3rem;
 }
 
-.poll-avatar {
+.poll-avatar,
+.navbar-user-avatar {
   height: 64px;
   width: 64px;
   min-width: 64px;
   min-height: 64px;
   display: inline-block;
   border-radius: 50%;
+}
+
+.navbar-user-avatar {
+  height: 36px;
+  width: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  margin-left: .54rem;
 }
 
 .media-title {

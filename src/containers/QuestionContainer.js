@@ -1,23 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import QuestionResult from "../components/QuestionResult";
 import QuestionForm from "../components/QuestionForm";
+import NoMatch from '../components/NoMatch'
 
-const QuestionContainer = props => {
-  const { users, authedUser, questions, match } = props;
-  const question = questions[match.params.question_id];
+class QuestionContainer extends Component {
+  componentDidMount() {}
+  render() {
+    const { users, authedUser, match, questions } = this.props;
+    const qid = match.params.question_id;
+    const question = questions[qid];
 
-  const isPollResult =
-    question.optionOne.votes.includes(authedUser) ||
-    question.optionTwo.votes.includes(authedUser);
+    if (!question) {
+      return <Redirect to="/404" Component={NoMatch} />;
+    }
 
-  return isPollResult ? (
-    <QuestionResult authedUser={authedUser} users={users} question={question} />
-  ) : (
-    <QuestionForm authedUser={authedUser} users={users} question={question} />
-  );
-};
+    const isPollResult =
+      question.optionOne.votes.includes(authedUser) ||
+      question.optionTwo.votes.includes(authedUser);
+
+    return isPollResult ? (
+      <QuestionResult
+        authedUser={authedUser}
+        users={users}
+        question={question}
+      />
+    ) : (
+      <QuestionForm authedUser={authedUser} users={users} question={question} />
+    );
+  }
+}
 
 function mapStateToProps({ authedUser, users, questions }) {
   return {
