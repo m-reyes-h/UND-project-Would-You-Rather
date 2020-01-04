@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Header from "../containers/Header";
+import Header from "./Header";
 import { handleSaveQuestionAnswer } from "../actions/shared";
 import { withRouter } from "react-router-dom";
 

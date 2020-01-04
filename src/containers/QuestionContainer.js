@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, Redirect } from "react-router-dom";
 import QuestionResult from "../components/QuestionResult";
-import QuestionForm from "../components/QuestionForm";
+import QuestionForm from "../containers/QuestionForm";
 import NoMatch from '../components/NoMatch'
 
 class QuestionContainer extends Component {
