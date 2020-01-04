@@ -7,6 +7,11 @@ All images from https://www.freepik.com/free-vector/
 
 ## View for the Login page
 
+![](https://cdn.loom.com/sessions/thumbnails/c621c25cb889422dbde4e289f20adc97-1578167933985-with-play.gif)
+
+
+)
+
 ![](./resources/Login-View.png "Login")
 
 - Is located at (/).
