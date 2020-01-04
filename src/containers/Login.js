@@ -36,11 +36,11 @@ class Login extends Component {
               <h4 className="mb-4 p-0 login-title font-weight-normal">
                 Would You Rather App
               </h4>
-              <div className="login-content-inner shadow-sm bg-white p-5">
-                <h5 className="login-subtitle mb-5">
+              <div className="login-content-inner shadow-sm bg-white py-5 px-4">
+                <h5 className="login-subtitle mb-3">
                   Select one character to login
                 </h5>
-                <div className="d-flex justify-content-center pb-4">
+                <div className="d-flex flex-wrap justify-content-center pb-2">
                   {Object.values(this.props.users).map(user => (
                     <LoginUser
                       key={user.id}
@@ -50,7 +50,12 @@ class Login extends Component {
                   ))}
                 </div>
               </div>
-              <Link to="/newuser">New user</Link>
+              <Link
+                to="/newuser"
+                className="d-inline-block flat-button flat-button-hero rounded-pill text-uppercase mt-4 shadow-sm"
+              >
+                Create new user
+              </Link>
             </div>
           </Col>
         </Row>

@@ -5,7 +5,6 @@ import Header from "./Header";
 import LeaderBoardCard from "../components/LeaderBoardCard";
 
 const Leaderboard = ({ users }) => {
-
   return (
     <Fragment>
       <Header />
@@ -28,7 +27,9 @@ function mapStateToProps({ users }) {
   const userScore = user =>
     Object.keys(user.answers).length + user.questions.length;
   return {
-    users: Object.values(users).sort((a, b) => userScore(b) - userScore(a))
+    users: Object.values(users)
+      .sort((a, b) => userScore(b) - userScore(a))
+      .slice(0, 3)
   };
 }
 

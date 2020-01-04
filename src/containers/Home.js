@@ -21,9 +21,13 @@ class Home extends Component {
                     title={`Unasnwered questions (${unansweredQuestions.length})`}
                   >
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {unansweredQuestions.map(qid => (
-                        <PollItemContainer key={qid} questionId={qid} />
-                      ))}
+                      {unansweredQuestions.length ? (
+                        unansweredQuestions.map(qid => (
+                          <PollItemContainer key={qid} questionId={qid} />
+                        ))
+                      ) : (
+                        <h5 className="text-center w-100 text-muted">You are all done!</h5>
+                      )}
                     </div>
                   </Tab>
                   <Tab
@@ -31,9 +35,13 @@ class Home extends Component {
                     title={`Asnwered questions (${answeredQuestions.length})`}
                   >
                     <div className="p-4 pt-5 d-flex justify-content-between flex-wrap">
-                      {answeredQuestions.map(qid => (
-                        <PollItemContainer key={qid} questionId={qid} />
-                      ))}
+                      {answeredQuestions.length ? (
+                        answeredQuestions.map(qid => (
+                          <PollItemContainer key={qid} questionId={qid} />
+                        ))
+                      ) : (
+                        <h5 className="text-center w-100 text-muted">Try to answer any question...</h5>
+                      )}
                     </div>
                   </Tab>
                 </Tabs>
