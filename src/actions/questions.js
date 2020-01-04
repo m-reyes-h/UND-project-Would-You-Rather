@@ -1,7 +1,6 @@
-import {} from "./users";
 export const RECEIVE_QUESTIONS = "RECEIVE_QUESTIONS";
-export const SAVE_QUESTION = "SAVE_QUESTION";
-export const SAVE_QUESTION_ANSWER = "SAVE_QUESTION_ANSWER";
+export const ADD_QUESTION = "ADD_QUESTION";
+export const ADD_QUESTION_ANSWER = "ADD_QUESTION_ANSWER";
 
 export function receiveQuestions(questions) {
   return {
@@ -10,16 +9,16 @@ export function receiveQuestions(questions) {
   };
 }
 
-export function saveQuestion(question) {
+export function addQuestion(question) {
   return {
-    type: SAVE_QUESTION,
+    type: ADD_QUESTION,
     question
   };
 }
 
-export function saveQuestionAnswer(authedUser, qid, answer) {
+export function addQuestionAnswer(authedUser, qid, answer) {
   return {
-    type: SAVE_QUESTION_ANSWER,
+    type: ADD_QUESTION_ANSWER,
     authedUser,
     qid,
     answer

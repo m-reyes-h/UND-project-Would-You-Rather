@@ -1,7 +1,7 @@
 import {
   RECEIVE_USERS,
   USER_ANSWER_QUESTION,
-  SAVE_USER_QUESTION
+  ADD_USER_QUESTION
 } from "../actions/users";
 
 export default function users(state = {}, action) {
@@ -23,7 +23,7 @@ export default function users(state = {}, action) {
         }
       };
 
-    case SAVE_USER_QUESTION:
+    case ADD_USER_QUESTION:
       return {
         ...state,
         [authedUser]: {

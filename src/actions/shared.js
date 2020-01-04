@@ -1,12 +1,12 @@
 import { showLoading, hideLoading } from "react-redux-loading-bar";
 import {
   receiveQuestions,
-  saveQuestionAnswer,
-  saveQuestion
+  addQuestionAnswer,
+  addQuestion
 } from "./questions";
-import { receiveUsers, saveUserAnswer, saveUserQuestion } from "./users";
-import { getInitialData } from "../utils/api";
-import { _saveQuestionAnswer, _saveQuestion } from "../utils/_DATA";
+import { receiveUsers, addUserAnswer, addUserQuestion } from "./users";
+import { getInitialData, saveQuestion, saveQuestionAnswerAPI } from "../utils/api";
+
 
 export function handleInitialData() {
   return dispatch => {
@@ -27,10 +27,10 @@ export function handleSaveQuestionAnswer(authedUser, qid, answer) {
   return dispatch => {
     dispatch(showLoading());
 
-    return _saveQuestionAnswer({ authedUser, qid, answer })
+    return saveQuestionAnswerAPI({ authedUser, qid, answer })
       .then(response => {
-        dispatch(saveQuestionAnswer(authedUser, qid, answer));
-        dispatch(saveUserAnswer(authedUser, qid, answer));
+        dispatch(addQuestionAnswer(authedUser, qid, answer));
+        dispatch(addUserAnswer(authedUser, qid, answer));
       })
       .then(() => {
         dispatch(hideLoading());
@@ -48,10 +48,10 @@ export function handleSaveQuestion(optionOneText, optionTwoText) {
 
     dispatch(showLoading());
 
-    return _saveQuestion({ optionOneText, optionTwoText, author: authedUser })
+    return saveQuestion({ optionOneText, optionTwoText, author: authedUser })
       .then(question => {
-        dispatch(saveQuestion(question));
-        dispatch(saveUserQuestion(question.author, question.id));
+        dispatch(addQuestion(question));
+        dispatch(addUserQuestion(question.author, question.id));
       })
       .then(() => {
         dispatch(hideLoading());
