@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, Redirect } from "react-router-dom";
 import QuestionResult from "../components/QuestionResult";
-import QuestionForm from "../containers/QuestionForm";
 import NoMatch from '../components/NoMatch'
+import QuestionFormContainer from "./QuestionFormContainer";
 
 class QuestionContainer extends Component {
   componentDidMount() {}
@@ -27,7 +27,7 @@ class QuestionContainer extends Component {
         question={question}
       />
     ) : (
-      <QuestionForm authedUser={authedUser} users={users} question={question} />
+      <QuestionFormContainer authedUser={authedUser} users={users} question={question} />
     );
   }
 }
