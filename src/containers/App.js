@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <LoadingBar className="loading" />
         <Switch>
           <Route exact path="/" component={Login} />
