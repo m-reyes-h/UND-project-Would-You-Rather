@@ -1,100 +1,93 @@
 # Would You Rather Project
 
-This is the starter code for the final assessment project for Udacity's React & Redux course.
+## Project purpose:
+This project was built for the UdacityNanodegree Program. The purpose of the project is to demonstrate understanding of the fundamentals of the Redux & React-Redux ecosystem.
 
-The `_DATA.js` file represents a fake database and methods that let you access the data. The only thing you need to edit in the ` _DATA.js` file is the value of `avatarURL`. Each user should have an avatar, so you’ll need to add the path to each user’s avatar.
+## Loading the App
 
-Using the provided starter code, you'll build a React/Redux front end for the application. We recommend using the [Create React App](https://github.com/facebook/create-react-app) to bootstrap the project.
+You can run a hosted version of the app at: ["Would"](https://github.com/m-reyes-h/UND-project-Would-You-Rather.git)
 
-## Data
+The project uses Node.js and the Create-React-App starter.
+Once Node is installed, navigate to the directory where you want to store the app.
 
-There are two types of objects stored in our database:
+```bash
+git clone https://github.com/m-reyes-h/UND-project-Would-You-Rather.git
+npm install
+npm start
+```
+A new browser window should automatically open. If it doesn't, navigate to http://localhost:3000/ in your browser.
 
-* Users
-* Questions
+![](./resources/screenshots/wyr-login.png "Login")
 
-### Users
+## Using the App
 
-Users include:
+"Would You Rather?" project, is a web app let you play the "Would You Rather?" game.  The game goes like this: A user is asked a question in the form: “Would you rather [option A] or [option B] ?”. Answering "neither" or "both" is against the rules.
 
-| Attribute    | Type             | Description           |
-|-----------------|------------------|-------------------         |
-| id                 | String           | The user’s unique identifier |
-| name          | String           | The user’s first name  and last name     |
-| avatarURL  | String           | The path to the image file |
-| questions | Array | A list of ids of the polling questions this user created|
-| answers      | Object         |  The object's keys are the ids of each question this user answered. The value of each key is the answer the user selected. It can be either `'optionOne'` or `'optionTwo'` since each question has two options.
+Users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
 
-### Questions
+#### Login page
 
-Questions include:
+The app starts on a login page where you can select a user from a precomposed list or create a new one.
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id                  | String | The question’s unique identifier |
-| author        | String | The author’s unique identifier |
-| timestamp | String | The time when the question was created|
-| optionOne | Object | The first voting option|
-| optionTwo | Object | The second voting option|
+![](./resources/screenshots/wyr-login.png "Login")
 
-### Voting Options
+NOTE:  The user should be signed in order to access the application pages.
 
-Voting options are attached to questions. They include:
+#### New User page
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| votes             | Array | A list that contains the id of each user who voted for that option|
-| text                | String | The text of the option |
+You can enter the desired first name, last name and select an avatar from the list.
 
-Your code will talk to the database via 4 methods:
+![](./resources/screenshots/wyr-new-user.png "New user")
 
-* `_getUsers()`
-* `_getQuestions()`
-* `_saveQuestion(question)`
-* `_saveQuestionAnswer(object)`
 
-1) `_getUsers()` Method
+#### Home page
 
-*Description*: Get all of the existing users from the database.  
-*Return Value*: Object where the key is the user’s id and the value is the user object.
+Once the user logs in into the app your can see the "Home" page and sould be able to toggle between his/her answered and unanswered polls.
 
-2) `_getQuestions()` Method
+>Alternatively, you can *Create* a **New Question**, *Go* to the **Leaderboard** or **Log out**
 
-*Description*: Get all of the existing questions from the database.  
-*Return Value*: Object where the key is the question’s id and the value is the question object.
+![](./resources/screenshots/wyr-home.png "Home")
 
-3) `_saveQuestion(question)` Method
+#### Unanswered / Answered polls
+![](./resources/screenshots/wyr-unanswered-q.png "Unanswered question")
+<center>Unanswered question</center>
 
-*Description*: Save the polling question in the database.  
-*Parameters*:  Object that includes the following properties: `author`, `optionOneText`, and `optionTwoText`. More details about these properties:
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| author | String | The id of the user who posted the question|
-| optionOneText| String | The text of the first option |
-| optionTwoText | String | The text of the second option |
+![](./resources/screenshots/wyr-answered-q.png "Answered question")
+<center>Answered question</center>
 
-*Return Value*:  An object that has the following properties: `id`, `author`, `optionOne`, `optionTwo`, `timestamp`. More details about these properties:
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| id | String | The id of the question that was posted|
-| author | String | The id of the user who posted the question|
-| optionOne | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-| optionTwo | Object | The object has a text property and a votes property, which stores an array of the ids of the users who voted for that option|
-|timestamp|String | The time when the question was created|
+_You can only search by author or title. So, don't worry if you don't find a specific author or title._
 
-4) `_saveQuestionAnswer(object)` Method
 
-*Description*: Save the answer to a particular polling question in the database.
-*Parameters*: Object that contains the following properties: `authedUser`, `qid`, and `answer`. More details about these properties:
+#### New Question page
 
-| Attribute | Type | Description |
-|-----------------|------------------|-------------------|
-| authedUser | String | The id of the user who answered the question|
-| qid | String | The id of the question that was answered|
-| answer | String | The option the user selected. The value should be either `"optionOne"` or `"optionTwo"`|
+The new created polling question should appear in the unanswered questions category on the home page.
 
-## Contributing
+![](./resources/screenshots/wyr-new-q.png "New question")
 
-This repository is the starter code for *all* Udacity students. Therefore, we most likely will not accept pull requests. For details, check out [CONTRIBUTING.md](https://github.com/udacity/reactnd-project-would-you-rather-starter/blob/master/CONTRIBUTING.md).
+#### Leaderboard page
+
+The more questions you ask and answer, the higher up you move!
+
+![](./resources/screenshots/wyr-leaderboard.png "Leaderboard")
+
+
+
+### Resources and Documentation:
+
+- [Create-react-app Documentation](https://github.com/facebookincubator/create-react-app)
+- [React Router Documentation](http://knowbody.github.io/react-router-docs/)
+- [React API](https://facebook.github.io/react/docs/react-api.html)
+- [React Redux docs](https://react-redux.js.org/)
+- [Avatar images](https://www.freepik.com/free-vector/)
+- [Protected Routes](https://tylermcginnis.com/react-router-protected-routes-authentication/
+) , [Render Routes](https://reacttraining.com/react-router/web/api/Route/render-func) and [Redirect](https://reacttraining.com/react-router/web/api/Redirect)
+
+### Udacity Resources:
+
+- [Project starter template](https://github.com/udacity/reactnd-project-would-you-rather-starter)
+- [Project Rubric](https://review.udacity.com/#!/rubrics/1567/view)
+- [Udacity CSS Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [Udacity HTML Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [Udacity JavaScript Style Guide](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
