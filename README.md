@@ -5,7 +5,7 @@ This project was built for the UdacityNanodegree Program. The purpose of the pro
 
 You can run a hosted version of the app at: [Would](https://github.com/m-reyes-h/UND-project-Would-You-Rather.git)
 
-You can see the planning stage at: [Planning Stage](./PlanningStage.md)
+You can see the planning stage at: [Planning Stage](https://github.com/m-reyes-h/UND-project-Would-You-Rather/PlanningStage.md)
 
 ## Loading the App
 
