@@ -5,7 +5,7 @@ This project was built for the UdacityNanodegree Program. The purpose of the pro
 
 You can run a hosted version of the app at: [Would You rather?](https://would-you-rather-m-reyes.herokuapp.com/)
 
-You can see the planning stage at: [Planning Stage](./PlanningStage.md)
+You can read the planning stage at: [Planning Stage](./PlanningStage.md)
 
 ## Loading the App
 
