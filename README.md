@@ -3,7 +3,7 @@
 ## Project purpose:
 This project was built for the UdacityNanodegree Program. The purpose of the project is to demonstrate understanding of the fundamentals of the Redux & React-Redux ecosystem.
 
-You can run a hosted version of the app at: [Would](https://github.com/m-reyes-h/UND-project-Would-You-Rather.git)
+You can run a hosted version of the app at: [Would You rather?](https://would-you-rather-m-reyes.herokuapp.com/)
 
 You can see the planning stage at: [Planning Stage](./PlanningStage.md)
 
