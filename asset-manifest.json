@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/m-reyes-h/UND-project-Would-You-Rather/static/css/main.0a0a1905.chunk.css",
+    "main.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.1ddb46dc.chunk.js",
+    "main.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.1ddb46dc.chunk.js.map",
+    "runtime-main.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/runtime-main.76161d0a.js",
+    "runtime-main.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/runtime-main.76161d0a.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/m-reyes-h/UND-project-Would-You-Rather/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.115969b0.chunk.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js",
+    "static/js/2.115969b0.chunk.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js.map",
+    "index.html": "/m-reyes-h/UND-project-Would-You-Rather/index.html",
+    "precache-manifest.b6884f218ae95e63763551b902cfb52f.js": "/m-reyes-h/UND-project-Would-You-Rather/precache-manifest.b6884f218ae95e63763551b902cfb52f.js",
+    "service-worker.js": "/m-reyes-h/UND-project-Would-You-Rather/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/m-reyes-h/UND-project-Would-You-Rather/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.0a0a1905.chunk.css.map": "/m-reyes-h/UND-project-Would-You-Rather/static/css/main.0a0a1905.chunk.css.map",
+    "static/js/2.115969b0.chunk.js.LICENSE": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js.LICENSE",
+    "static/media/index.css": "/m-reyes-h/UND-project-Would-You-Rather/static/media/question_answer-24px.85d4c7f6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76161d0a.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.115969b0.chunk.js",
+    "static/css/main.0a0a1905.chunk.css",
+    "static/js/main.1ddb46dc.chunk.js"
+  ]
+}
