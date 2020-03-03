@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import LoadingBar from "react-redux-loading-bar";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import { handleInitialData } from "../actions/shared";
 import Leaderboard from "./Leaderboard";
 import NoMatch from "../components/NoMatch";
