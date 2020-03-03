@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/m-reyes-h/UND-project-Would-You-Rather/precache-manifest.2df776ad2df86e8b3c9fd1cbf84c392c.js"
+  "/m-reyes-h/UND-project-Would-You-Rather/precache-manifest.da06c50b5605783bba2b8927c9c00f70.js"
 );
 
 self.addEventListener('message', (event) => {
