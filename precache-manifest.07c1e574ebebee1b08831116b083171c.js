@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3e9ec389fb2ea83eb444977d89bb02d",
+    "revision": "aeb679ec00b80123d6729d330804959f",
     "url": "/m-reyes-h/UND-project-Would-You-Rather/index.html"
   },
   {
-    "revision": "3869619c79686cf20b29",
+    "revision": "5ce78c1f0778d729a0d8",
     "url": "/m-reyes-h/UND-project-Would-You-Rather/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "aa0dec344f7013e1ab7a",
+    "revision": "2148fcae416627a79b20",
     "url": "/m-reyes-h/UND-project-Would-You-Rather/static/css/main.0a0a1905.chunk.css"
   },
   {
-    "revision": "3869619c79686cf20b29",
-    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js"
+    "revision": "5ce78c1f0778d729a0d8",
+    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.be8b253a.chunk.js"
   },
   {
     "revision": "86afaa925e0f432774bf95b19b6933fb",
-    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js.LICENSE"
+    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.be8b253a.chunk.js.LICENSE"
   },
   {
-    "revision": "aa0dec344f7013e1ab7a",
-    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.7ba49068.chunk.js"
+    "revision": "2148fcae416627a79b20",
+    "url": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.4c9d1a51.chunk.js"
   },
   {
     "revision": "89eb1ab7257806264df5",

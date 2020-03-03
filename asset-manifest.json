@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/m-reyes-h/UND-project-Would-You-Rather/static/css/main.0a0a1905.chunk.css",
-    "main.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.7ba49068.chunk.js",
-    "main.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.7ba49068.chunk.js.map",
+    "main.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.4c9d1a51.chunk.js",
+    "main.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/main.4c9d1a51.chunk.js.map",
     "runtime-main.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/runtime-main.76161d0a.js",
     "runtime-main.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/runtime-main.76161d0a.js.map",
     "static/css/2.17e5ed98.chunk.css": "/m-reyes-h/UND-project-Would-You-Rather/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.115969b0.chunk.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js",
-    "static/js/2.115969b0.chunk.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js.map",
+    "static/js/2.be8b253a.chunk.js": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.be8b253a.chunk.js",
+    "static/js/2.be8b253a.chunk.js.map": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.be8b253a.chunk.js.map",
     "index.html": "/m-reyes-h/UND-project-Would-You-Rather/index.html",
-    "precache-manifest.da06c50b5605783bba2b8927c9c00f70.js": "/m-reyes-h/UND-project-Would-You-Rather/precache-manifest.da06c50b5605783bba2b8927c9c00f70.js",
+    "precache-manifest.07c1e574ebebee1b08831116b083171c.js": "/m-reyes-h/UND-project-Would-You-Rather/precache-manifest.07c1e574ebebee1b08831116b083171c.js",
     "service-worker.js": "/m-reyes-h/UND-project-Would-You-Rather/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/m-reyes-h/UND-project-Would-You-Rather/static/css/2.17e5ed98.chunk.css.map",
     "static/css/main.0a0a1905.chunk.css.map": "/m-reyes-h/UND-project-Would-You-Rather/static/css/main.0a0a1905.chunk.css.map",
-    "static/js/2.115969b0.chunk.js.LICENSE": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.115969b0.chunk.js.LICENSE",
+    "static/js/2.be8b253a.chunk.js.LICENSE": "/m-reyes-h/UND-project-Would-You-Rather/static/js/2.be8b253a.chunk.js.LICENSE",
     "static/media/index.css": "/m-reyes-h/UND-project-Would-You-Rather/static/media/question_answer-24px.85d4c7f6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.76161d0a.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.115969b0.chunk.js",
+    "static/js/2.be8b253a.chunk.js",
     "static/css/main.0a0a1905.chunk.css",
-    "static/js/main.7ba49068.chunk.js"
+    "static/js/main.4c9d1a51.chunk.js"
   ]
 }
